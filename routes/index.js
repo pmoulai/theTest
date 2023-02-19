@@ -10,4 +10,8 @@ router.get('/astier', function(req, res, next) {
   res.render('astier', { nom: 'Astier', type:'Bts' });
 });
 
+router.get('/bts', function(req, res, next) {
+  res.render('bts', { nom: 'Ciel' });
+});
+
 module.exports = router;
