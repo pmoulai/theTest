@@ -10,4 +10,18 @@ router.get('/astier', function(req, res, next) {
   res.render('astier', { nom: 'Astier', type:'Bts' });
 });
 
+router.post('/stands', function (req, res){
+  const reqBody = req.body
+  if(reqBody.name){
+    res.json({status: 'ok'});
+    return;
+  }
+
+  res.json({
+    status: 'KO',
+    messages: 'param name required'
+  }).status(422)
+  return;
+});
+
 module.exports = router;
