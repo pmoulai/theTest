@@ -10,4 +10,8 @@ router.get('/astier', function(req, res, next) {
   res.render('astier', { nom: 'Astier', type:'Bts' });
 });
 
+router.get('/stands', function(req, res, next) {
+  res.render('stands', { nom: 'Stands' });
+});
+
 module.exports = router;
