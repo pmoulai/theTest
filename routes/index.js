@@ -10,6 +10,10 @@ router.get('/astier', function(req, res, next) {
   res.render('astier', { nom: 'Astier', type:'Bts' });
 });
 
+router.get('/stands', function(req, res, next) {
+  res.render('stands', { nom: 'Stands' });
+});
+
 router.post('/stands', function (req, res){
   const reqBody = req.body
   if(reqBody.name){
